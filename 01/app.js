@@ -7,12 +7,19 @@ class App extends React.Component {
     state = {
         counter: 0,
     }
+
+    constructor(props) {
+
+        super(props)
+        console.log("constructor")
+    }
     render() {
         console.log('render');
 
         return <h1>{ this.state.counter }</h1>
     }
 
+   
     componentDidMount(){
         console.log('ComponentDidMount')
         
@@ -23,7 +30,10 @@ class App extends React.Component {
      
     }
 
+    componentDidUpdate(){
+        console.log('ComponentDidUpdate')
 
+    }
     componentWillUnmount(){
        
         clearInterval(this.id)

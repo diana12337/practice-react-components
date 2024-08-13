@@ -9,6 +9,7 @@ class WeatherApp extends React.Component {
     }
 
     render() {
+       
         const { weatherData } = this.state;
         if (weatherData) {
             // renderuj dopiero jak pobierzesz dane z API
@@ -27,8 +28,8 @@ class WeatherApp extends React.Component {
 
 
     componentDidMount() {
-
         const { longitude, latitude } = this.props
+        
         const promise = fetch(`https://api.weatherbit.io/v2.0/current?key=8c0f3e2bfce546e48c806c2eaf77af17&lat=${latitude}&lon=${longitude}`)
         promise.then((resp) => {
 

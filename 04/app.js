@@ -115,7 +115,7 @@ class App extends React.Component {
         });
 
         const searchedUsers = this.filterUsers(value)
-console.log(searchedUsers)
+
         this.setState({
             filteredUsers: searchedUsers
         })
